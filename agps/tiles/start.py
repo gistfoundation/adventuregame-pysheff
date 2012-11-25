@@ -46,3 +46,5 @@ def enter(name, inventory):
             use_key(inventory)
         elif (action[0] in take_words) and ('rope' in action):
             pick_up_rope(inventory)
+        else:
+            print("Sorry, I don't understand.")
