@@ -6,7 +6,7 @@ def enter(name, inventory):
     print("You push through the undergrowth - there's hardly a path here at all.")
     print()
     while True:
-        action = action_prompt()
+        action = action_prompt(inventory)
         if action[0] is move:
             return action[1]
         else:

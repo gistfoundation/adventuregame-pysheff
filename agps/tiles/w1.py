@@ -7,7 +7,7 @@ def enter(name, inventory):
           "sand. Ahead of you, the ocean stretches as far as you can see.")
     print()
     while True:
-        action = action_prompt()
+        action = action_prompt(inventory)
         if action[0] is move:
             return action[1]
         else:

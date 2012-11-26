@@ -19,7 +19,7 @@ def enter(name, inventory):
               "If you're hungry enough, anyway.")
     print()
     while True:
-        action = action_prompt()
+        action = action_prompt(inventory)
         if action[0] is move:
             return action[1]
         if (action[0] in take_words) and ('berries' in action):

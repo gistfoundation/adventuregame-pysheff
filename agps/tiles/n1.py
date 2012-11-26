@@ -7,7 +7,7 @@ def enter(name, inventory):
           "entrance to a cave.")
     print()
     while True:
-        action = action_prompt()
+        action = action_prompt(inventory)
         if action[0] is move:
             return action[1]
         else:
