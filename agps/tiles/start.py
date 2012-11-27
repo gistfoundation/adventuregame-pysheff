@@ -2,6 +2,8 @@
 
 from agps.utils import action_prompt, move, take_words
 
+KEYS_NEEDED = 3
+
 class GameWon(Exception):
     """Abuse exception handling to escape the game loop when we finish."""
     pass
@@ -14,10 +16,10 @@ def use_key(inventory):
     if inventory['golden key'] > 0:
         inventory['golden key'] -= 1
         scene_contents['keys_used'] += 1
-        if scene_contents['keys_used'] == 4:
+        if scene_contents['keys_used'] == KEYS_NEEDED:
             raise GameWon
         print("You put the key in and turn it carefully. "
-              "%s more to go." % 4 - scene_contents['keys_used'])
+              "%s more to go." % KEYS_NEEDED - scene_contents['keys_used'])
     else:
         print("You don't have a golden key to use.")
 use = {'use', 'insert'}
@@ -32,7 +34,7 @@ def pick_up_rope(inventory):
 
 def enter(name, inventory):
     print("You are in a sizeable clearing in the forest. At your feet, you see "
-          "a mysterious trap door, with four golden keyholes. Paths lead off "
+          "a mysterious trap door, with three golden keyholes. Paths lead off "
           "in four directions, which your unerring sense of direction tells you "
           "correspond to the four compass points.")
     if scene_contents.get('rope'):
