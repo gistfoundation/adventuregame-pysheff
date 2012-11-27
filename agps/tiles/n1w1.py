@@ -5,7 +5,7 @@ from agps.utils import action_prompt, move, take_words
 scene_contents = {'boat':1}
 
 def enter(name, inventory):
-    print("The trees open out onto a beautiful beach. Small waves lap at the "
+    print("The beach continues. Small waves lap at the "
           "sand. Ahead of you, the ocean stretches as far as you can see.")
     if scene_contents.get('boat'):
         print("There is a small boat high up on the sand")
