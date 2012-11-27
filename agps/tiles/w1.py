@@ -9,7 +9,7 @@ def enter(name, inventory):
     while True:
         action = action_prompt(inventory)
         if action[0] is move:
-            if action[1][0] == 'w' and not inventory.get['boat']:
+            if action[1][0] == 'w' and not inventory['boat']:
                 print("you've forgotten how to swim")
             else:
                 return action[1]

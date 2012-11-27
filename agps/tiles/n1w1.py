@@ -14,8 +14,8 @@ def enter(name, inventory):
         action = action_prompt(inventory)
         if action[0] in take_words and 'boat' in action:
             pick_up_boat(inventory)
-        elif action[0] in move:
-            if action[1][0] == 'w' and not inventory.get['boat']:
+        elif action[0] is move:
+            if action[1][0] == 'w' and not inventory['boat']:
                 print("you've forgotten how to swim")
             else:
                 return action[1]
