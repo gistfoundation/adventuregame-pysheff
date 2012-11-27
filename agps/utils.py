@@ -3,6 +3,7 @@ move_directions = {'n','e','s','w','north','east','south','west'}
 move_words = {'move','walk','go'}
 prepositions = {'up', 'down', 'on', 'under', 'in', 'at', 'to'}
 
+drop_words = {'drop'}
 look_words = {'look', 'inspect', 'examine'}
 inventory_names = {'inventory', 'possessions', 'belongings', 'bag'}
 
