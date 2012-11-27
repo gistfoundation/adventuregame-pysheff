@@ -18,8 +18,8 @@ def use_key(inventory):
         scene_contents['keys_used'] += 1
         if scene_contents['keys_used'] == KEYS_NEEDED:
             raise GameWon
-        print("You put the key in and turn it carefully. "
-              "%s more to go." % KEYS_NEEDED - scene_contents['keys_used'])
+        print("You put the key in and turn it carefully. ",
+              "%s more to go." % (KEYS_NEEDED - scene_contents['keys_used']))
     else:
         print("You don't have a golden key to use.")
 use = {'use', 'insert'}
