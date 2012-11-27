@@ -1,6 +1,9 @@
 move = object()
 move_directions = {'n','e','s','w','north','east','south','west'}
 move_words = {'move','walk','go'}
+give_words = {'give', 'feed', 'present'}
+use_words = {'eat', 'use', 'wear'}
+fight_words = {'fight', 'kill', 'hit', 'attack'}
 prepositions = {'up', 'down', 'on', 'under', 'in', 'at', 'to'}
 
 drop_words = {'drop'}
