@@ -28,7 +28,11 @@ def enter(name, inventory):
     while True:
         action = action_prompt(inventory)
         if action[0] is move:
-            return action[1]
+            if action[1].upper() == 'S' and 'rhinoceros' in scene_contents:
+                print ("There's a rhino in the way! You can't go south")
+                continue
+            else:
+                return action[1]
         if action[0] in give_words and 'berries' in action and ('rhino' in action or 'rhinoceros' in action):
             feed_berries_to_rhino(inventory)
         elif action[0] in fight_words and ('rhino' in action or 'rhinoceros' in action):
