@@ -2,7 +2,7 @@
 
 from agps.utils import action_prompt, move, take_words
 
-scene_contents = {'berries':1}
+scene_contents = {'berries':2}
 
 def take_berries(inventory):
     if scene_contents['berries'] > 0:
